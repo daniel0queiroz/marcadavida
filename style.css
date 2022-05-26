@@ -32,6 +32,8 @@ h1 {
 
 h2 {
     font-size: 5.5rem;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 h3 {
@@ -73,11 +75,14 @@ a {
 
 .section {
     min-height: 100vh;
+    position: relative;
 }
 
+    
 .menu {
     background: var(--white-color);
-    position: fixed;
+    position: flex;
+    text-align: center;
     top: 0;
     left: 0;
     right: 0;
@@ -85,23 +90,27 @@ a {
     border-bottom: 0.1rem solid var(--light-gray-color);
 }
 
+
 .menu-content {
     display: flex;
     justify-content: space-between;
+    text-align: center;
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
 }
 
 .menu h1 a img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
     padding-top: 20px;
-    max-width: 200px;
-    max-height: 200px;
 }
 
 .menu ul {
     list-style: none;
     display: flex;
+    position: static;
 }
 
 .menu ul li a {
@@ -126,4 +135,43 @@ a {
 .menu ul li a:hover::after {
     width: 50%;
     left: 25%;
+}
+
+.div > p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.div > h1, p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white-color);
+    padding: var(--gap);
+    line-height: 5rem;
+    position: absolute;
+    po
+}
+
+@media (max-width: 860px) {
+    .menu ul li a {
+        font-size: 1.8rem;
+    }
+    .menu h1 a img {
+        max-width: 300px;
+        max-height: 300px;
+        margin: auto;
+        padding-top: 20px;
+    }
+    .menu-content {
+        display: inline-block;
+        justify-content: baseline;
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .div, h2 {
+        font-size: 3rem;
+    }
 }
