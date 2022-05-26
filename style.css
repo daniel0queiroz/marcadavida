@@ -147,7 +147,6 @@ a {
     padding: var(--gap);
     line-height: 5rem;
     position: absolute;
-    po
 }
 
 @media (max-width: 860px) {
