@@ -13,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +32,7 @@ h1 {
 }
 
 h2 {
-    font-size: 5.5rem;
+    font-size: max(5.5rem, 5vw);
     text-transform: uppercase;
     text-align: center;
 }
@@ -68,7 +69,7 @@ a {
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
 }
@@ -146,31 +147,24 @@ a {
     color: var(--white-color);
     padding: var(--gap);
     line-height: 5rem;
-    position: absolute;
+}
+
+.orange-grid {
+    display: grid;
+    gap: var(--gap);
+    height: 100vh;
 }
 
 @media (max-width: 860px) {
-    .menu ul li a {
-        font-size: 1.8rem;
-    }
-    .menu h1 a img {
-        max-width: 300px;
-        max-height: 300px;
-        margin: auto;
-        padding-top: 20px;
-    }
+
     .menu-content {
         display: inline-block;
         justify-content: baseline;
         text-align: center;
         align-items: center;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
     }
-
-    .div, h2 {
-        font-size: 3rem;
+    
+    .div , h2 {
+        font-size: 3.3rem;
     }
 }
